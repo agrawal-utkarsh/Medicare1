@@ -10,13 +10,14 @@ public class Medicine {
 	private Integer offerId ;
 	private Integer tagId;
     private boolean isActive;
+    private String imageUrl;
 	
     public Medicine() {
     	
     }
     
 	public Medicine(Integer id, String name, String description, Integer sellerId, Integer price, Integer offerId,
-			Integer tagId, Boolean isActive) {
+			Integer tagId, Boolean isActive, String imageUrl) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -26,10 +27,11 @@ public class Medicine {
 		this.offerId = offerId;
 		this.tagId = tagId;
 		this.isActive = isActive;
+		this.imageUrl = imageUrl;
 	}
 	
 	public Medicine(String name, String description, Integer sellerId, Integer price, Integer offerId, Integer tagId,
-			Boolean isActive) {
+			Boolean isActive, String imageUrl) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -38,6 +40,7 @@ public class Medicine {
 		this.offerId = offerId;
 		this.tagId = tagId;
 		this.isActive = isActive;
+		this.imageUrl = imageUrl;
 	}
 
 	public Integer getId() {
@@ -90,11 +93,21 @@ public class Medicine {
 	public void setActive(boolean isActive) {
 		this.isActive = isActive;
 	}
+	
+	public String getImageUrl() {
+		return this.imageUrl;
+	}
+	
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
 
 	@Override
 	public String toString() {
 		return "Medicine [id=" + id + ", name=" + name + ", description=" + description + ", sellerId=" + sellerId
-				+ ", price=" + price + ", offerId=" + offerId + ", tagId=" + tagId + ", isActive=" + isActive + "]";
+				+ ", price=" + price + ", offerId=" + offerId + ", tagId=" + tagId + ", isActive=" + isActive 
+				+ ", imageUrl=" + imageUrl
+				+ "]";
 	}
 
 }

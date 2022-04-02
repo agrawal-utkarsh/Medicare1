@@ -28,7 +28,7 @@
 					responseString += "<br/><p class='display-5'>You have ordered : </p><br/><br/><ul>";
 					for(Map.Entry<Integer,Integer> entry : medicineQuantityMap.entrySet()) {
 						if(entry.getValue()>0){
-							responseString += "<li class='display-6'>"+medicineMap.get(entry.getKey()).getName()+"</li>";							
+							responseString += "<li class='display-6'><img height='100' width='100' src='"+ medicineMap.get(entry.getKey()).getImageUrl() +"'/>" + medicineMap.get(entry.getKey()).getName()+"</li>";							
 						}
 					}
 					responseString += "</ul></p><br/><br/><p class='display-5'>Your chosen method of payment is : </p><br/><br/><li class='display-6'>"+ paymentMethod +"</li>";

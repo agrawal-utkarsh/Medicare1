@@ -31,13 +31,15 @@ public class EditMedicine extends HttpServlet {
 		int tagId = Integer.valueOf(request.getParameter("tag"));
 		int offerId = Integer.valueOf(request.getParameter("offer"));
 		String isActiveString = request.getParameter("active");
+		String imageUrl = request.getParameter("imageUrl");
+		System.out.println("uttu " + imageUrl);
 		boolean isActive;
 		if(isActiveString==null) {
 			isActive=false;
 		}else {
 			isActive=true;
 		}
-		if (database.editMedicine(new Medicine(id,name,description,sellerId,price,offerId,tagId,isActive))) {
+		if (database.editMedicine(new Medicine(id,name,description,sellerId,price,offerId,tagId,isActive,imageUrl))) {
 			out.print("Medicine edited successfully");
 		} else {
 			out.print("Error occurred.");

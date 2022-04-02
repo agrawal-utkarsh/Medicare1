@@ -30,13 +30,14 @@ public class AddMedicine extends HttpServlet {
 		int tagId = Integer.valueOf(request.getParameter("tag"));
 		int offerId = Integer.valueOf(request.getParameter("offer"));
 		String isActiveString = request.getParameter("active");
+		String imgUrl = request.getParameter("imageUrl");
 		boolean isActive;
 		if(isActiveString==null) {
 			isActive=false;
 		}else {
 			isActive=true;
 		}
-		if (database.addMedicine(new Medicine(name,description,sellerId,price,offerId,tagId,isActive))) {
+		if (database.addMedicine(new Medicine(name,description,sellerId,price,offerId,tagId,isActive,imgUrl))) {
 			out.print("Medicine added successfully");
 		} else {
 			out.print("Error occurred.");

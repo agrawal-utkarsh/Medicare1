@@ -32,6 +32,8 @@
 				<input class="form-control" type="text" name="name" value = <%= medicine.getName() %> /> <br /> <br /> 
 				<label class="form-label" for="description">Description:</label>
 				<input class="form-control" type="text" name="description" value = '<%= medicine.getDescription() %>'/><br /> <br />
+				<label class="form-label" for="imageUrl">Image Url:</label>
+				<input class="form-control" type="text" name="imageUrl" value = '<%= medicine.getImageUrl() %>'/><br /> <br />
 				<label class="form-label" for="price">Price:</label>
 				<input class="form-control" type="number" min=0 name="price" value = '<%= medicine.getPrice() %>'/><br /> <br />
 				<label class="form-label" for="seller">Seller:</label>

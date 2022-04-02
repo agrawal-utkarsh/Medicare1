@@ -19,6 +19,8 @@
 				<input class="form-control" type="text" name="name"/> <br /> <br /> 
 				<label class="form-label" for="description">Description:</label>
 				<input class="form-control" type="text" name="description"/><br /> <br />
+				<label class="form-label" for="imageUrl">Image Url:</label>
+				<input class="form-control" type="text" name="imageUrl"/><br /> <br />
 				<label class="form-label" for="price">Price:</label>
 				<input class="form-control" type="number" min=0 name="price"/><br /> <br />
 				<label class="form-label" for="seller">Seller:</label>

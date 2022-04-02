@@ -22,7 +22,7 @@ public class Database {
 			Statement stmt=con.createStatement();  
 			ResultSet rs=stmt.executeQuery(Queries.GET_ALL_MEDICINES);  
 			while(rs.next()) {
-				medicineMap.put(rs.getInt(1), new Medicine(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getBoolean(8)));
+				medicineMap.put(rs.getInt(1), new Medicine(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getBoolean(8),rs.getString(9)));
 			}
 			con.close();  
 			} catch(Exception e) {
@@ -147,6 +147,7 @@ public class Database {
 			stmt.setInt(5, medicine.getOfferId());
 			stmt.setInt(6, medicine.getTagId());
 			stmt.setBoolean(7, medicine.isActive());
+			stmt.setString(8, medicine.getImageUrl());
 			
 			int result = stmt.executeUpdate();
 			if(result > 0) {
@@ -234,7 +235,8 @@ public class Database {
 			stmt.setInt(5, medicine.getOfferId());
 			stmt.setInt(6, medicine.getTagId());
 			stmt.setBoolean(7, medicine.isActive());
-			stmt.setInt(8, medicine.getId());
+			stmt.setString(8, medicine.getImageUrl());
+			stmt.setInt(9, medicine.getId());
 			
 			int result = stmt.executeUpdate();
 			if(result > 0) {

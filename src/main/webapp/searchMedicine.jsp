@@ -25,7 +25,7 @@
 
 					String responseString = "<table class='display' id='medicineTable' style='width:100%'>";
 					responseString += "<thead><tr><th>Name</th><th>Description</th><th>Seller</th>";
-					responseString += "<th>Price</th><th>Offer</th><th>Tag</th><th></th><th></th><th>Qty in Cart</th>";
+					responseString += "<th>Price</th><th></th><th>Offer</th><th>Tag</th><th></th><th></th><th>Qty in Cart</th>";
 					responseString += "</tr></thead><tbody>";
 					
 					for(Map.Entry<Integer,Medicine> entry : medicineMap.entrySet()) {
@@ -36,6 +36,7 @@
 							responseString += "<td>" + medicine.getDescription() + "</td>";
 							responseString += "<td>" + sellerMap.get(medicine.getSellerId()).getName() + "</td>";
 							responseString += "<td>" + medicine.getPrice() + "</td>";
+							responseString += "<td>" + "<img height='100' width='100' src='" + medicine.getImageUrl() + "' />" + "</td>";
 							responseString += "<td>" + offerMap.get(medicine.getOfferId()).getName() + "</td>";
 							responseString += "<td>" + tagMap.get(medicine.getTagId()).getName() + "</td>";
 							responseString += "<td><input class='btn btn-outline-primary' type='submit' value='Add' onclick='addToCart("+medicineId+")' /></td>";

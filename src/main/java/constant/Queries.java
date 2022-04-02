@@ -3,7 +3,7 @@ package constant;
 public class Queries {
 
 	public static final String GET_ALL_MEDICINES = 
-			"select id, name, description, seller_id, price, offer_id, tag_id, is_active from medicine";
+			"select id, name, description, seller_id, price, offer_id, tag_id, is_active, image_url from medicine";
 
 	public static final String GET_ALL_TAGS = 
 			"select id, name from tag";
@@ -21,7 +21,7 @@ public class Queries {
 			"insert into user(username, password, is_admin) values(?, ?, 0);";
 	
 	public static final String INSERT_MEDICINE = 
-			"insert into medicine(name,description,seller_id,price,offer_id,tag_id,is_active) values (?,?,?,?,?,?,?)";
+			"insert into medicine(name,description,seller_id,price,offer_id,tag_id,is_active,image_url) values (?,?,?,?,?,?,?,?)";
 
 	public static final String INSERT_TAG = 
 			"insert into tag(name) values (?)";
@@ -33,6 +33,6 @@ public class Queries {
 			"insert into seller(name) values (?)";
 	
 	public static final String EDIT_MEDICINE = 
-			"update medicine set name=?,description=?,seller_id=?,price=?,offer_id=?,tag_id=?,is_active=? where id=?";
+			"update medicine set name=?,description=?,seller_id=?,price=?,offer_id=?,tag_id=?,is_active=?,image_url=? where id=?";
 
 }

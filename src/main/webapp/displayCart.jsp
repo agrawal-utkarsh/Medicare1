@@ -27,7 +27,7 @@
 					String responseString = "<table class='table' id='cartTable' style='width:100%'>";
 					responseString += "<thead><tr><th>Name</th><th>Description</th><th>Seller</th>";
 					responseString += "<th>Price</th><th>Offer</th><th>Price After Discount</th>";
-					responseString += "<th>Tag</th><th></th><th></th><th>Qty in Cart</th><th>Final Amount</th>";
+					responseString += "<th></th><th>Tag</th><th></th><th></th><th>Qty in Cart</th><th>Final Amount</th>";
 					responseString += "</tr></thead><tbody>";
 					
 					int totalAmount = 0;
@@ -45,6 +45,7 @@
 						responseString += "<td>" + priceBeforeOffer + "</td>";
 						responseString += "<td>" + offerMap.get(medicine.getOfferId()).getName() + "</td>";
 						responseString += "<td id='priceAfterOffer"+medicine.getId()+"'>" + priceAfterOffer + "</td>";
+						responseString += "<td>" + "<img height='100' width='100' src='" + medicine.getImageUrl() + "' />" + "</td>";
 						responseString += "<td>" + tagMap.get(medicine.getTagId()).getName() + "</td>";
 						responseString += "<td><input class='btn btn-outline-primary' type='submit' value='Add' onclick='addToCart("+medicineId+")' /></td>";
 						responseString += "<td><input class='btn btn-outline-primary' type='submit' value='Remove' onclick='removefromCart("+medicineId+")' /></td>";
